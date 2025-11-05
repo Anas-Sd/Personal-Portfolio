@@ -1,0 +1,195 @@
+import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Code2, Globe, Database, BookOpen, Wrench, Users } from "lucide-react";
+import aviatrixLogo from "@/assets/aviatrix-logo.svg";
+import cambridgeLogo from "@/assets/cambridge-logo.png";
+import uipathLogo from "@/assets/uipath-logo.png";
+import oracleCert from "@/assets/oracle-cert.png";
+
+export const Skills = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation();
+  const { ref: certsRef, isVisible: certsVisible } = useScrollAnimation();
+
+  const skillCategories = [
+    {
+      title: "Programming",
+      icon: Code2,
+      skills: ["C", "Java", "JavaScript"],
+    },
+    {
+      title: "Web Development",
+      icon: Globe,
+      skills: ["HTML", "CSS", "React.js", "Express.js", "Node.js"],
+    },
+    {
+      title: "Database",
+      icon: Database,
+      skills: ["MySQL", "MongoDB"],
+    },
+    {
+      title: "Core CS",
+      icon: BookOpen,
+      skills: ["DSA", "OOP", "DBMS"],
+    },
+    {
+      title: "Tools",
+      icon: Wrench,
+      skills: ["VS Code", "Git", "Eclipse", "Postman"],
+    },
+    {
+      title: "Soft Skills",
+      icon: Users,
+      skills: [
+        "Problem Solving",
+        "Self-Learning",
+        "Adaptability",
+        "Communication",
+        "Leadership",
+        "Teamwork",
+      ],
+    },
+  ];
+
+  const certifications = [
+    {
+      name: "Microsoft AZ-900",
+      url: "https://learn.microsoft.com/api/credentials/share/en-us/SyedAnas-0823/BE0A8F33D5A9C39D?sharingId=7B22CF4CD61D4F5C",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    },
+    {
+      name: "Oracle Certified Foundations Associate",
+      url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4D40EFAD38B71B4D4FFF0FE4F7BFDA04FF7D2814851EC5D7EB1E0A17BE798B82",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+    },
+    {
+      name: "Oracle Certified Architect Associate",
+      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=1D296148D2BC1CAA1026BH148C8D2CAA",
+      logo: oracleCert,
+    },
+    {
+      name: "Salesforce Certified AI & Cloud Associate",
+      url: "https://www.salesforce.com/trailblazer/kl2300032619",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
+    },
+    {
+      name: "AWS AI/ML Virtual Internship (EduSkills)",
+      url: "#",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    },
+    {
+      name: "ACE Aviatrix Multi Cloud Network Associate",
+      url: "#",
+      logo: aviatrixLogo,
+    },
+    {
+      name: "Cambridge Lingua Skills",
+      url: "#",
+      logo: cambridgeLogo,
+    },
+    {
+      name: "RPA Certified Essentials Automation Professional",
+      url: "#",
+      logo: uipathLogo,
+    },
+  ];
+
+  return (
+    <section
+      id="skills"
+      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <div
+          ref={titleRef}
+          className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${
+            titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+            Skills & Expertise
+          </h2>
+          <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
+        </div>
+
+        {/* Skill Cards */}
+        <div
+          ref={skillsRef}
+          className="flex gap-6 sm:gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth mb-12 sm:mb-16"
+        >
+          {skillCategories.map((category, index) => (
+            <Card
+              key={index}
+              className={`p-5 sm:p-6 hover:shadow-glow transition-all duration-700 min-w-[280px] md:min-w-[320px] snap-start flex-shrink-0 ${
+                skillsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{
+                transitionDelay: skillsVisible ? `${index * 100}ms` : "0ms",
+              }}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold">{category.title}</h3>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                {category.skills.map((skill, skillIndex) => (
+                  <span
+                    key={skillIndex}
+                    className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-muted rounded-full text-xs sm:text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors text-center"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Certifications */}
+        <div
+          id="certifications"
+          ref={certsRef}
+          className={`mt-12 sm:mt-16 transition-all duration-700 ${
+            certsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">
+            Certifications
+          </h3>
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth">
+            {certifications.map((cert) => (
+              <Card
+                key={cert.name}
+                className="p-4 sm:p-6 hover:shadow-glow transition-all animate-fade-in w-[180px] sm:w-[200px] snap-start flex-shrink-0"
+              >
+                <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-muted rounded-xl p-2 sm:p-3">
+                    <img
+                      src={cert.logo}
+                      alt={cert.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h4 className="font-semibold text-xs sm:text-sm leading-tight break-words">
+                    {cert.name}
+                  </h4>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-xs sm:text-sm font-medium"
+                  >
+                    Verify Here →
+                  </a>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
