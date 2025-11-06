@@ -58,9 +58,6 @@ export const Projects = () => {
               <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 MongoDB
               </span>
-              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-accent/10 text-accent rounded-full text-xs font-medium">
-                AI/ML
-              </span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -76,7 +73,7 @@ export const Projects = () => {
               </Button>
               <Button asChild variant="outline" size="sm" className="flex-1">
                 <a
-                  href="https://github.com/Anas-Sd"
+                  href="https://github.com/Anas-Sd/Prompt_2_Paint"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -95,19 +92,11 @@ export const Projects = () => {
           >
             <div className="mb-4 sm:mb-6">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-3 sm:mb-4">
-                <svg
-                  className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-                  />
-                </svg>
+                <img
+                  src={new URL("@/assets/flip the card logo.png", import.meta.url).href}
+                  alt="Flip The Card Project"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
                 Flip the Card Game
@@ -119,12 +108,6 @@ export const Projects = () => {
             </div>
 
             <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
-              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                HTML
-              </span>
-              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                CSS
-              </span>
               <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 JavaScript
               </span>
@@ -132,14 +115,14 @@ export const Projects = () => {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild variant="outline" size="sm" className="flex-1">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://flip2win.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </a>
               </Button>
               <Button asChild variant="outline" size="sm" className="flex-1">
                 <a
-                  href="https://github.com/Anas-Sd"
+                  href="https://github.com/Anas-Sd/FLIP---THE---CARD"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -172,8 +155,10 @@ export const Projects = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
+              <h3 className="text-lg flex sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
                 Weather App
+                <img className="rounded-2xl ml-2 mt-2.5 w-6 h-6 flex brightness-175" src={new URL("@/assets/yellow sstatus.jpeg", import.meta.url).href} alt="" />
+                <p className="text-xs mt-3 flex">working</p>
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                 Real-time weather application with location-based forecasts. Clean interface displaying
@@ -195,7 +180,7 @@ export const Projects = () => {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild variant="outline" size="sm" className="flex-1">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a>
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </a>

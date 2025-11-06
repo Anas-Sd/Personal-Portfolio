@@ -4,7 +4,6 @@ import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 import { cn } from "@/lib/utils";
 import { toggleVariants } from "@/components/ui/toggle";
 
-// No types allowed in JSX; context is created without generics/default value types
 const ToggleGroupContext = React.createContext({
   size: "default",
   variant: "default",
@@ -22,7 +21,6 @@ ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
 const ToggleGroupItem = React.forwardRef(
   ({ className, children, variant, size, ...props }, ref) => {
     const context = React.useContext(ToggleGroupContext);
-
     return (
       <ToggleGroupPrimitive.Item
         ref={ref}

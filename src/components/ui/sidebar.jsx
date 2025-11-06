@@ -180,9 +180,6 @@ const Sidebar = React.forwardRef(
 );
 Sidebar.displayName = "Sidebar";
 
-// ... Repeat this for all components below, removing all TypeScript type annotations and generics. Each should be standard JS and JSX only!
-
-// Export your components at the end
 export {
   Sidebar,
   SidebarContent,

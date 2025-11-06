@@ -78,32 +78,51 @@ export const Hero = () => {
                       }`}
                   />
 
-                  {/* Left: Download */}
+                  {/* ✅ Left: Always download */}
                   <a
-                    href="https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf"
-                    download
+                    href="#"
                     title="Download Resume"
                     aria-label="Download resume"
                     className="z-10 flex items-center justify-center px-3 transition-all duration-300 hover:bg-blue-600 hover:text-white rounded-l-lg"
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      const url =
+                        "https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf";
+                      try {
+                        const response = await fetch(url);
+                        const blob = await response.blob();
+                        const link = document.createElement("a");
+                        link.href = URL.createObjectURL(blob);
+                        link.download = "SYED_ANAS_Resume.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        URL.revokeObjectURL(link.href);
+                      } catch (error) {
+                        console.error("Download failed:", error);
+                      }
+                    }}
                   >
                     <Download className="w-4 h-4" />
                   </a>
 
-                  {/* Divider + Right: View (opens in new tab) */}
+                  {/* Right: View (opens in new tab) */}
                   <a
-                    href="https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf"
+                    href="/resume"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open resume in new tab"
                     className="z-10 group flex items-center gap-2 px-5 py-3 border-l border-border transition-all duration-300 hover:bg-blue-600 rounded-r-lg"
                   >
                     <Eye className="w-4 h-4 group-hover:text-white" />
-                    <span className="text-black font-medium group-hover:text-white">View Resume</span>
+                    <span className="text-black font-medium group-hover:text-white">
+                      View Resume
+                    </span>
                   </a>
                 </div>
-
               </div>
 
+              {/* Contact button */}
               <Button
                 onClick={scrollToContact}
                 size="lg"
@@ -114,9 +133,10 @@ export const Hero = () => {
               </Button>
             </div>
 
-
+            {/* Social icons */}
             <div className="flex items-center gap-4 pt-4 animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_2s_both]">
               <span className="text-sm text-muted-foreground">Follow me:</span>
+
               <a
                 href="https://github.com/Anas-Sd"
                 target="_blank"
@@ -125,6 +145,7 @@ export const Hero = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/-syedanas/"
                 target="_blank"
@@ -133,6 +154,7 @@ export const Hero = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+
               <a
                 href="mailto:myportfolio44455@gmail.com"
                 className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
