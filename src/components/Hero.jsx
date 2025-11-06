@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin, Briefcase, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Eye, MapPin, Briefcase, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { useState, useEffect } from "react";
@@ -23,12 +23,7 @@ export const Hero = () => {
     }
   };
 
-  const openResume = () => {
-    window.open(
-      "https://raw.githubusercontent.com/Anas-Sd/syed-anas-portfolify/main/public/SYED_ANAS_RESUME_complete-94.pdf",
-      "_blank"
-    );
-  };
+  // NOTE: view/download actions use direct links to the PDF in public/
 
   return (
     <section
@@ -69,31 +64,56 @@ export const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 sm:gap-4 animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
-              <Button
-                onClick={openResume}
-                size="lg"
-                className={`relative bg-foreground text-background shadow-glow transition-all duration-[2000ms] transform animate-float ${
-                  autoHover ? "scale-105" : "hover:scale-105"
-                }`}
-              >
-                <span
-                  className={`absolute inset-0 rounded-lg bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-md transition-opacity duration-[2000ms] ${
-                    autoHover ? "opacity-70" : "opacity-0 group-hover:opacity-50"
-                  }`}
-                />
-                <Download className="w-4 h-4 mr-2 z-10" />
-                <span className="z-10">View Resume</span>
-              </Button>
+            <div className="flex flex-wrap gap-3 sm:gap-4 items-center animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
+              <div className="flex items-center gap-2">
+                {/* Split button: left = download, right = view */}
+                <div
+                  className={`relative inline-flex items-stretch overflow-hidden rounded-lg bg-foreground text-background shadow-glow transition-all duration-[2000ms] transform animate-float ${autoHover ? "scale-105" : "hover:scale-105"
+                    }`}
+                >
+                  {/* Gradient overlay */}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-0 rounded-lg blur-md transition-opacity duration-[2000ms] ${autoHover ? "opacity-70" : "opacity-0 group-hover:opacity-50"
+                      }`}
+                  />
+
+                  {/* Left: Download */}
+                  <a
+                    href="https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf"
+                    download
+                    title="Download Resume"
+                    aria-label="Download resume"
+                    className="z-10 flex items-center justify-center px-3 transition-all duration-300 hover:bg-blue-600 hover:text-white rounded-l-lg"
+                  >
+                    <Download className="w-4 h-4" />
+                  </a>
+
+                  {/* Divider + Right: View (opens in new tab) */}
+                  <a
+                    href="https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open resume in new tab"
+                    className="z-10 group flex items-center gap-2 px-5 py-3 border-l border-border transition-all duration-300 hover:bg-blue-600 rounded-r-lg"
+                  >
+                    <Eye className="w-4 h-4 group-hover:text-white" />
+                    <span className="text-black font-medium group-hover:text-white">View Resume</span>
+                  </a>
+                </div>
+
+              </div>
+
               <Button
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-foreground text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300"
+                className="bg-foreground text-black font-medium text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300 hover:text-white"
               >
                 Contact Me
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
+
 
             <div className="flex items-center gap-4 pt-4 animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_2s_both]">
               <span className="text-sm text-muted-foreground">Follow me:</span>
@@ -106,7 +126,7 @@ export const Hero = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/syed-anas-58b3b2252"
+                href="https://www.linkedin.com/in/-syedanas/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
@@ -114,7 +134,7 @@ export const Hero = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:myportfolio44455@gmail.com"
                 className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
               >
                 <Mail className="w-5 h-5" />
