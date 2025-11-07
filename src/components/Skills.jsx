@@ -1,10 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Code2, Globe, Database, BookOpen, Wrench, Users } from "lucide-react";
-import aviatrixLogo from "@/assets/aviatrix-logo.svg";
-import cambridgeLogo from "@/assets/cambridge-logo.png";
-import uipathLogo from "@/assets/uipath-logo.png";
-import oracleCert from "@/assets/oracle-cert.png";
+import { certifications } from "@/assets/assets";
 
 export const Skills = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
@@ -48,49 +45,6 @@ export const Skills = () => {
         "Leadership",
         "Teamwork",
       ],
-    },
-  ];
-
-  const certifications = [
-    {
-      name: "Microsoft AZ-900",
-      url: "https://learn.microsoft.com/api/credentials/share/en-us/SyedAnas-0823/BE0A8F33D5A9C39D?sharingId=7B22CF4CD61D4F5C",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    },
-    {
-      name: "Oracle Certified Foundations Associate",
-      url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4D40EFAD38B71B4D4FFF0FE4F7BFDA04FF7D2814851EC5D7EB1E0A17BE798B82",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-    },
-    {
-      name: "Oracle Certified Architect Associate",
-      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=1D296148D2BC1CAA1026BH148C8D2CAA",
-      logo: oracleCert,
-    },
-    {
-      name: "Salesforce Certified AI & Cloud Associate",
-      url: "https://www.salesforce.com/trailblazer/kl2300032619",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
-    },
-    {
-      name: "AWS AI/ML Virtual Internship (EduSkills)",
-      url: "#",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-    },
-    {
-      name: "ACE Aviatrix Multi Cloud Network Associate",
-      url: "#",
-      logo: aviatrixLogo,
-    },
-    {
-      name: "Cambridge Lingua Skills",
-      url: "#",
-      logo: cambridgeLogo,
-    },
-    {
-      name: "RPA Certified Essentials Automation Professional",
-      url: "#",
-      logo: uipathLogo,
     },
   ];
 
@@ -182,7 +136,7 @@ export const Skills = () => {
                     rel="noopener noreferrer"
                     className="text-primary hover:underline text-xs sm:text-sm font-medium"
                   >
-                    Verify Here →
+                    View Certificate →
                   </a>
                 </div>
               </Card>

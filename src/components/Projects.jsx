@@ -102,12 +102,15 @@ export const Projects = () => {
                 Flip the Card Game
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-                Interactive memory card game built with vanilla JavaScript. Features smooth animations,
+                Interactive memory card game built with JavaScript. Features smooth animations,
                 score tracking, and responsive design for an engaging user experience.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                HTML
+              </span>
               <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 JavaScript
               </span>
@@ -158,7 +161,7 @@ export const Projects = () => {
               <h3 className="text-lg flex sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
                 Weather App
                 <img className="rounded-2xl ml-2 mt-2.5 w-6 h-6 flex brightness-175" src={new URL("@/assets/yellow sstatus.jpeg", import.meta.url).href} alt="" />
-                <p className="text-xs mt-3 flex">working</p>
+                <p className="text-xs mt-3 flex">currently working</p>
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                 Real-time weather application with location-based forecasts. Clean interface displaying

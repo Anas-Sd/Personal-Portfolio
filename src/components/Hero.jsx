@@ -115,7 +115,7 @@ export const Hero = () => {
                     className="z-10 group flex items-center gap-2 px-5 py-3 border-l border-border transition-all duration-300 hover:bg-blue-600 rounded-r-lg"
                   >
                     <Eye className="w-4 h-4 group-hover:text-white" />
-                    <span className="text-black font-medium group-hover:text-white">
+                    <span className="black font-medium group-hover:text-white">
                       View Resume
                     </span>
                   </a>
