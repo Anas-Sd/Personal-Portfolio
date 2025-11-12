@@ -8,7 +8,7 @@ export default function Azure_Certificate() {
   return (
     <div className="w-full h-screen bg-gray-100 flex flex-col items-center justify-center">
       <iframe
-        src="/MICROSOFT AZURE AZ-900 CERTIFICATE.pdf"
+        src="/Certificates/MICROSOFT AZURE AZ-900 CERTIFICATE.pdf"
         className="w-full h-full border-none"
         title="Azure Certificate"
       ></iframe>

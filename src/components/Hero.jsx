@@ -69,54 +69,36 @@ export const Hero = () => {
             <div className="flex flex-row pt-4 gap-3 sm:gap-4 items-center animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
               {/* Resume Buttons */}
               <div className="flex flex-row gap-3">
-              <div className="flex-shrink-0 inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
-                <a
-                  href="#"
-                  onClick={async (e) => {
-                    e.preventDefault();
-                    const url =
-                      "https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf";
-                    try {
-                      const response = await fetch(url);
-                      const blob = await response.blob();
-                      const link = document.createElement("a");
-                      link.href = URL.createObjectURL(blob);
-                      link.download = "SYED_ANAS_Resume.pdf";
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                      URL.revokeObjectURL(link.href);
-                    } catch (error) {
-                      console.error("Download failed:", error);
-                    }
-                  }}
-                  className="flex items-center justify-center px-2 py-1  bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-l-lg"
-                  aria-label="Download Resume"
-                >
-                  <Download className="w-4 h-4" />
-                </a>
+                <div className="flex-shrink-0 inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
+                  {/* Download Resume */}
+                  <a
+                    href="/SYED_ANAS_RESUME_complete-94.pdf"
+                    download="SYED_ANAS_Resume.pdf"
+                    className="flex items-center justify-center px-2 py-1 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-l-lg"
+                  >
+                    <Download className="w-4 h-4" />
+                  </a>
 
-                <a
-                  href="/resume"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center font-semibold gap-1 px-3 py-2.5  sm:px-5 sm:py-3 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-r-lg"
-                  aria-label="View Resume"
+                  {/* View Resume */}
+                  <a
+                    href="/Resume"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center font-semibold gap-1 px-3 py-2.5 sm:px-5 sm:py-3 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-r-lg"
+                  >
+                    <span>View Resume</span>
+                  </a>
+                </div>
+
+                {/* Contact Button */}
+                <Button
+                  onClick={scrollToContact}
+                  className="bg-foreground px-3 py-1 sm:px-6 sm:py-5 text-black font-medium text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300 hover:text-white"
                 >
-                  {/* <Eye className="w-4 h-4" /> */}
-                  <span>View Resume</span>
-                </a>
+                  Contact Me
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
-
-              {/* Contact Button */}
-              <Button
-                onClick={scrollToContact}
-                className="bg-foreground px-3 py-1 sm:px-6 sm:py-5 text-black font-medium text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300 hover:text-white"
-              >
-                Contact Me
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
             </div>
 
             {/* Social Links */}
@@ -133,19 +115,19 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-                    
+
           {/* Right Image */}
           <div className="flex justify-center md:justify-end order-1 md:order-2 animate-[scale-in_1.2s_cubic-bezier(0.4,0,0.2,1)_0.8s_both]">
-           <div className="relative w-full max-w-lg sm:w-72 md:w-80 lg:w-full lg:max-w-md aspect-video sm:aspect-square mt-12 sm:mt-0">
-  <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-pulse" />
-  <div className="relative bg-card rounded-3xl p-2 border border-border shadow-glow hover:shadow-elegant transition-all duration-500 hover:scale-105">
-    <img
-      src={new URL("@/assets/profile-photo.jpg", import.meta.url).href}
-      alt="Syed Anas - AI & Full Stack Developer"
-      className="w-full h-full object-cover rounded-2xl"
-    />
-  </div>
-</div>
+            <div className="relative w-full max-w-lg sm:w-72 md:w-80 lg:w-full lg:max-w-md aspect-video sm:aspect-square mt-12 sm:mt-0">
+              <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-pulse" />
+              <div className="relative bg-card rounded-3xl p-2 border border-border shadow-glow hover:shadow-elegant transition-all duration-500 hover:scale-105">
+                <img
+                  src={new URL("@/assets/profile-photo.jpg", import.meta.url).href}
+                  alt="Syed Anas - AI & Full Stack Developer"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
 
 
 

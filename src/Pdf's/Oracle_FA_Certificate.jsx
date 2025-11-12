@@ -8,7 +8,7 @@ export default function Oracle_FA_Certificate() {
   return (
     <div className="w-full h-screen bg-gray-100 flex flex-col items-center justify-center">
       <iframe
-        src="/Oracle Certified Foundations Associate Certificate.pdf"
+        src="/Certificates/Oracle Certified Foundations Associate Certificate.pdf"
         className="w-full h-full border-none"
         title="Oracle Foundations Associate"
       ></iframe>

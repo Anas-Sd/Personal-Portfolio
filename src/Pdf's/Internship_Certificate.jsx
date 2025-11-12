@@ -8,7 +8,7 @@ export default function Internship_Certificate() {
   return (
     <div className="w-full h-screen bg-gray-100 flex flex-col items-center justify-center">
       <iframe
-        src="/SYED ANAS AWS AIML VIRTUAL INTERNSHIP.pdf"
+        src="/Certificates/SYED ANAS AWS AIML VIRTUAL INTERNSHIP.pdf"
         className="w-full h-full border-none"
         title="AI-ML Virtual Internship Certificate"
       ></iframe>
