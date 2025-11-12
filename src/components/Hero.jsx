@@ -1,4 +1,13 @@
-import { ArrowRight, Download, Eye, MapPin, Briefcase, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  Eye,
+  MapPin,
+  Briefcase,
+  Github,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { useState, useEffect } from "react";
@@ -10,29 +19,24 @@ export const Hero = () => {
 
   useEffect(() => {
     setAutoHover(true);
-    const timer = setTimeout(() => {
-      setAutoHover(false);
-    }, 2500);
+    const timer = setTimeout(() => setAutoHover(false), 2500);
     return () => clearTimeout(timer);
   }, []);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
-
-  // NOTE: view/download actions use direct links to the PDF in public/
 
   return (
     <section
       id="home"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-hero"
     >
-      <div className="max-w-7xl w-full mx-auto pt-32 pb-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
+      <div className="max-w-7xl w-full mx-auto pt-10 sm:pt-24 md:pt-32 pb-16">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Text */}
+          <div className="space-y-6 lg:space-y-8 order-2 md:order-1">
             <div className="space-y-4 animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_0.8s_both]">
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight">
                 Hi, I&apos;m Syed Anas
@@ -42,17 +46,14 @@ export const Hero = () => {
                   {animatedTitle}
                 </h2>
               </div>
-              <div className="space-y-2">
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  BTech 3rd Year,
-                  <br />
-                  Computer Science & Engineering,
-                  <br />
-                  KL University
-                </p>
-              </div>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                BTech 3rd Year,<br />
+                Computer Science & Engineering,<br />
+                KL University
+              </p>
             </div>
 
+            {/* Info */}
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.2s_both]">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
@@ -64,117 +65,91 @@ export const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 sm:gap-4 items-center animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
-              <div className="flex items-center gap-2">
-                {/* Split button: left = download, right = view */}
-                <div
-                  className={`relative inline-flex items-stretch overflow-hidden rounded-lg bg-foreground text-background shadow-glow transition-all duration-[2000ms] transform animate-float ${autoHover ? "scale-105" : "hover:scale-105"
-                    }`}
+            {/* Buttons */}
+            <div className="flex flex-row pt-4 gap-3 sm:gap-4 items-center animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
+              {/* Resume Buttons */}
+              <div className="flex flex-row gap-3">
+              <div className="flex-shrink-0 inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
+                <a
+                  href="#"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    const url =
+                      "https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf";
+                    try {
+                      const response = await fetch(url);
+                      const blob = await response.blob();
+                      const link = document.createElement("a");
+                      link.href = URL.createObjectURL(blob);
+                      link.download = "SYED_ANAS_Resume.pdf";
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                      URL.revokeObjectURL(link.href);
+                    } catch (error) {
+                      console.error("Download failed:", error);
+                    }
+                  }}
+                  className="flex items-center justify-center px-2 py-1  bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-l-lg"
+                  aria-label="Download Resume"
                 >
-                  {/* Gradient overlay */}
-                  <span
-                    aria-hidden="true"
-                    className={`absolute inset-0 rounded-lg blur-md transition-opacity duration-[2000ms] ${autoHover ? "opacity-70" : "opacity-0 group-hover:opacity-50"
-                      }`}
-                  />
+                  <Download className="w-4 h-4" />
+                </a>
 
-                  {/* ✅ Left: Always download */}
-                  <a
-                    href="#"
-                    title="Download Resume"
-                    aria-label="Download resume"
-                    className="z-10 flex items-center justify-center px-3 transition-all duration-300 hover:bg-blue-600 hover:text-white rounded-l-lg"
-                    onClick={async (e) => {
-                      e.preventDefault();
-                      const url =
-                        "https://cdn.jsdelivr.net/gh/Anas-Sd/Portfolio/public/SYED_ANAS_RESUME_COMPLETE-94.pdf";
-                      try {
-                        const response = await fetch(url);
-                        const blob = await response.blob();
-                        const link = document.createElement("a");
-                        link.href = URL.createObjectURL(blob);
-                        link.download = "SYED_ANAS_Resume.pdf";
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        URL.revokeObjectURL(link.href);
-                      } catch (error) {
-                        console.error("Download failed:", error);
-                      }
-                    }}
-                  >
-                    <Download className="w-4 h-4" />
-                  </a>
-
-                  {/* Right: View (opens in new tab) */}
-                  <a
-                    href="/resume"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Open resume in new tab"
-                    className="z-10 group flex items-center gap-2 px-5 py-3 border-l border-border transition-all duration-300 hover:bg-blue-600 rounded-r-lg"
-                  >
-                    <Eye className="w-4 h-4 group-hover:text-white" />
-                    <span className="black font-medium group-hover:text-white">
-                      View Resume
-                    </span>
-                  </a>
-                </div>
+                <a
+                  href="/resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center font-semibold gap-1 px-3 py-2.5  sm:px-5 sm:py-3 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-r-lg"
+                  aria-label="View Resume"
+                >
+                  {/* <Eye className="w-4 h-4" /> */}
+                  <span>View Resume</span>
+                </a>
               </div>
 
-              {/* Contact button */}
+              {/* Contact Button */}
               <Button
                 onClick={scrollToContact}
-                size="lg"
-                className="bg-foreground text-black font-medium text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300 hover:text-white"
+                className="bg-foreground px-3 py-1 sm:px-6 sm:py-5 text-black font-medium text-background hover:opacity-90 transition-all shadow-glow hover:scale-105 transform duration-300 hover:text-white"
               >
                 Contact Me
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
+            </div>
 
-            {/* Social icons */}
+            {/* Social Links */}
             <div className="flex items-center gap-4 pt-4 animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_2s_both]">
               <span className="text-sm text-muted-foreground">Follow me:</span>
-
-              <a
-                href="https://github.com/Anas-Sd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
-              >
+              <a href="https://github.com/Anas-Sd" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center hover:scale-110 transform transition duration-300">
                 <Github className="w-5 h-5" />
               </a>
-
-              <a
-                href="https://www.linkedin.com/in/-syedanas/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
-              >
+              <a href="https://www.linkedin.com/in/-syedanas/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center hover:scale-110 transform transition duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
-
-              <a
-                href="mailto:myportfolio44455@gmail.com"
-                className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center hover:scale-110 transform duration-300"
-              >
+              <a href="mailto:myportfolio44455@gmail.com" className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center hover:scale-110 transform transition duration-300">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
+                    
+          {/* Right Image */}
+          <div className="flex justify-center md:justify-end order-1 md:order-2 animate-[scale-in_1.2s_cubic-bezier(0.4,0,0.2,1)_0.8s_both]">
+           <div className="relative w-full max-w-lg sm:w-72 md:w-80 lg:w-full lg:max-w-md aspect-video sm:aspect-square mt-12 sm:mt-0">
+  <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-pulse" />
+  <div className="relative bg-card rounded-3xl p-2 border border-border shadow-glow hover:shadow-elegant transition-all duration-500 hover:scale-105">
+    <img
+      src={new URL("@/assets/profile-photo.jpg", import.meta.url).href}
+      alt="Syed Anas - AI & Full Stack Developer"
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
+</div>
 
-          <div className="flex justify-center lg:justify-end animate-[scale-in_1.2s_cubic-bezier(0.4,0,0.2,1)_0.8s_both] order-1 lg:order-2">
-            <div className="relative w-48 sm:w-64 md:w-80 lg:w-full lg:max-w-md aspect-square">
-              <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-pulse" />
-              <div className="relative bg-card rounded-3xl p-2 border border-border shadow-glow hover:shadow-elegant transition-all duration-500 hover:scale-105">
-                <img
-                  src={new URL("@/assets/profile-photo.jpg", import.meta.url).href}
-                  alt="Syed Anas - AI & Full Stack Developer"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-            </div>
+
+
+
           </div>
         </div>
       </div>
