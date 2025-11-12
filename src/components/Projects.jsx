@@ -61,7 +61,7 @@ export const Projects = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                 <a
                   href="https://prompt2paint.vercel.app"
                   target="_blank"
@@ -71,7 +71,7 @@ export const Projects = () => {
                   Live Demo
                 </a>
               </Button>
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                 <a
                   href="https://github.com/Anas-Sd/Prompt_2_Paint"
                   target="_blank"
@@ -109,21 +109,18 @@ export const Projects = () => {
 
             <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
               <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                HTML
-              </span>
-              <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 JavaScript
               </span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                   <a href="https://flip2win.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </a>
               </Button>
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                 <a
                   href="https://github.com/Anas-Sd/FLIP---THE---CARD"
                   target="_blank"
@@ -160,8 +157,8 @@ export const Projects = () => {
               </div>
               <h3 className="text-lg flex sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
                 Weather App
-                <img className="rounded-2xl ml-2 mt-2.5 w-6 h-6 flex brightness-175" src={new URL("@/assets/yellow sstatus.jpeg", import.meta.url).href} alt="" />
-                <p className="text-xs mt-3 flex">currently working</p>
+                <img className="rounded-2xl ml-2 mt-2 sm:mt-2.5 w-6 h-6 flex brightness-175" src={new URL("@/assets/yellow sstatus.jpeg", import.meta.url).href} alt="" />
+                <p className="text-[0.6rem] mt-1 text-white/80 sm:mt-3 flex">currently working</p>
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                 Real-time weather application with location-based forecasts. Clean interface displaying
@@ -182,13 +179,13 @@ export const Projects = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                 <a>
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </a>
               </Button>
-              <Button asChild variant="outline" size="sm" className="flex-1">
+              <Button asChild variant="outline" size="sm" className="flex-1 p-2">
                 <a
                   href="https://github.com/Anas-Sd"
                   target="_blank"
