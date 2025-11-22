@@ -43,7 +43,7 @@ export const Projects = () => {
                 Prompt 2 Paint
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-                AI-powered MERN application for text-to-image generation. Integrated cloud storage
+                Prompt 2 Paint an AI-powered MERN Stack application for text-to-image generation. Integrated cloud storage
                 and responsive UI. Built secure backend using Node.js, Express.js, MongoDB Atlas.
               </p>
             </div>
@@ -99,10 +99,10 @@ export const Projects = () => {
                 />
               </div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
-                Flip the Card Game
+                Flip 2 Win
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-                Interactive memory card game built with JavaScript. Features smooth animations,
+                Flip 2 Win an Interactive memory card game built with JavaScript. Features smooth animations,
                 score tracking, and responsive design for an engaging user experience.
               </p>
             </div>
@@ -158,7 +158,7 @@ export const Projects = () => {
               <h3 className="text-lg flex sm:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3">
                 Weather App
                 <img className="rounded-2xl ml-2 mt-2 sm:mt-2.5 w-6 h-6 flex brightness-175" src={new URL("@/assets/yellow sstatus.jpeg", import.meta.url).href} alt="" />
-                <p className="text-[0.6rem] mt-1 text-white/80 sm:mt-3 flex">currently working</p>
+                <p className="text-[0.5rem] sm:text-[0.6rem]  mt-1.5 text-gray-400 sm:mt-1 flex">working</p>
               </h3>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
                 Real-time weather application with location-based forecasts. Clean interface displaying
