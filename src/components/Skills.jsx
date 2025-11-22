@@ -128,12 +128,12 @@ export const Skills = () => {
                     </div>
                     <div className="pl-4 pt-1">
                       <h1 className="text-lg sm:text-2xl">{cert.bigname}</h1>
-                      <h4 className="text-zinc-300 pt-1 sm:pt-2 font-semibold text-xs sm:text-sm leading-tight break-words">
+                      <h4 className="text-zinc-500 pt-1 sm:pt-2 font-semibold text-xs sm:text-sm leading-tight break-words">
                         {cert.name}
                       </h4>
                     </div>
                   </div>
-                  <div className=" flex flex-col text-xs gap-1 text-zinc-300">
+                  <div className=" flex flex-col text-xs gap-1 text-zinc-500">
                     <div className="">Issued on : {cert.issuedOn}</div>
                     <div className="mb-2 text-[0.6rem] sm:text-xs">Credential Id : {cert.credentialID}</div>
                     <a
