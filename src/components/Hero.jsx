@@ -13,7 +13,7 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 import { useState, useEffect } from "react";
 
 export const Hero = () => {
-  const titles = ["AI & Full Stack Developer", "DevOps Engineer"];
+  const titles = ["AI & Full Stack Developer", "AI & Full Stack Developer"];
   const animatedTitle = useTypewriter(titles, 80, 40, 2000);
   const [autoHover, setAutoHover] = useState(false);
 

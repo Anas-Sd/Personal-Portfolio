@@ -8,7 +8,7 @@ export const certifications = [
   {
     bigname: "Azure AZ-900",
     name: "Microsoft",
-    url: "/Azure",
+    url: "https://www.credly.com/badges/589abeb6-378f-488f-91bd-5ff17b0f696f/public_url",
     logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
     issuedOn : "08/08/2025",
     credentialID : "ozxr-uSez"
@@ -16,7 +16,7 @@ export const certifications = [
   {
     bigname: "Foundations Associate",
     name: "Oracle",
-    url: "/Oracle-Foundations-Associate",
+    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=E1FC30BEADE4EB64ABAA681873D89B5A7AB3BEE46918EF5144312E31C6426A1A",
     logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
     issuedOn : "07/09/2025",
     credentialID : "102560148OCI25FNDCFA"
@@ -26,6 +26,22 @@ export const certifications = [
 //     url: "/Oracle Cloud Infrastructure 2025 Certified Architect Associate.pdf",
 //     logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
 //   },
+{
+   bigname: "AIML Virtual Internship",
+  issuedOn : "10/06/2025",
+  credentialID : "0de15c82e9068f86545983cc92b18511",
+  name: "By AWS - via EduSkills",
+  url: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=0de15c82e9068f86545983cc92b18511",
+  logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+},
+{
+  bigname: "Multi Cloud Network Associate",
+  name: "Aviatrix",
+  issuedOn : "30/10/2025",
+  credentialID : "b5d1a95e-c95f-4b35-96e6-87f4b815e966",
+  url: "https://www.credly.com/badges/b5d1a95e-c95f-4b35-96e6-87f4b815e966/public_url",
+  logo: aviatrixLogo,
+},
   {
     bigname: "Agentforce Specialist",
     issuedOn : "13/09/2025",
@@ -34,19 +50,6 @@ export const certifications = [
     url: "/Salesforce-Agentforce-Specialist",
     logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
   },
-  {
-     bigname: "AIML Virtual Internship",
-    issuedOn : "10/06/2025",
-    credentialID : "0de15c82e9068f86545983cc92b18511",
-    name: "By AWS - via EduSkills",
-    url: "/AIML-Virtual-Internship",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-  },
-//   {
-//     name: "ACE Aviatrix Multi Cloud Network Associate",
-//     url: "/AVIATRIX ACE MULTICLOUD NETWORK ASSOCIATE CERTIFICATE.pdf",
-//     logo: aviatrixLogo,
-//   },
   {
      bigname: "English - Lingua Skills",
     issuedOn : "20/05/2024",
