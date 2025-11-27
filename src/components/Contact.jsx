@@ -270,7 +270,7 @@ export const Contact = () => {
                 size="lg"
                 className="w-full text-sm sm:text-base"
               >
-                <a href="mailto:anasannu44455@gmail.com">Email Me Directly</a>
+                <a href="mailto:myportfolio44455@gmail.com">Email Me Directly</a>
               </Button>
             </Card>
           </div>
