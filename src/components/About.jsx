@@ -70,10 +70,10 @@ export const About = () => {
                 <div className="overflow-hidden">
                   <h4 className="font-semibold mb-1 text-sm sm:text-base">Email</h4>
                   <a
-                    href="mailto:anasannu44455@gmail.com"
+                    href="mailto:myportfolio44455@gmail.com"
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                   >
-                    anasannu44455@gmail.com
+                    myportfolio44455@gmail.com
                   </a>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export const About = () => {
               <li className="flex gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Participated in 2 university Hackathons which involved building websites in teams
+                  Participated in 3 university Hackathons which involved building websites in teams
                 </p>
               </li>
             </ul>
