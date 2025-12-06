@@ -122,7 +122,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-pulse" />
               <div className="relative bg-card rounded-3xl p-2 border border-border shadow-glow hover:shadow-elegant transition-all duration-500 hover:scale-105">
                 <img
-                  src={new URL("@/assets/profile-photo.jpg", import.meta.url).href}
+                  src={new URL("@/assets/SYED_ANAS_PROFESSIONAL_IMAGE.png", import.meta.url).href}
                   alt="Syed Anas - AI & Full Stack Developer"
                   className="w-full h-full object-cover rounded-2xl"
                 />
