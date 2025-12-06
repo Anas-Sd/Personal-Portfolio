@@ -69,7 +69,7 @@ export const Hero = () => {
             <div className="flex flex-row pt-4 gap-3 sm:gap-4 items-center animate-[fade-in_1s_cubic-bezier(0.4,0,0.2,1)_1.6s_both]">
               {/* Resume Buttons */}
               <div className="flex flex-row gap-3">
-                <div className="flex-shrink-0 inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
+                <div className="flex-shrink-0  inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
                   {/* Download Resume */}
                   <a
                     href="/SYED_ANAS_RESUME_3.1.pdf"
@@ -84,7 +84,7 @@ export const Hero = () => {
                     href="/Resume"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center font-semibold gap-1 px-3 py-2.5 sm:px-5 sm:py-3 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-r-lg"
+                    className="flex items-center font-semibold gap-1 px-3 py-2.5 sm:px-5 sm:py-2.5 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-r-lg"
                   >
                     <span>View Resume</span>
                   </a>
