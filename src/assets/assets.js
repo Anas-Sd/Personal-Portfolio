@@ -13,19 +13,22 @@ export const certifications = [
     issuedOn : "08/08/2025",
     credentialID : "ozxr-uSez"
   },
+  // {
+  //   bigname: "Foundations Associate",
+  //   name: "Oracle",
+  //   url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=E1FC30BEADE4EB64ABAA681873D89B5A7AB3BEE46918EF5144312E31C6426A1A",
+  //   logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+  //   issuedOn : "07/09/2025",
+  //   credentialID : "102560148OCI25FNDCFA"
+  // },
   {
-    bigname: "Foundations Associate",
+    bigname: "Architect Associate",
     name: "Oracle",
-    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=E1FC30BEADE4EB64ABAA681873D89B5A7AB3BEE46918EF5144312E31C6426A1A",
     logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-    issuedOn : "07/09/2025",
-    credentialID : "102560148OCI25FNDCFA"
+    url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=1CB6B67E3B835E38CC1F521C9305487F7B922EC3D521765AB63C169C34EAF914",
+    issuedOn : "29/10/2025",
+    credentialID : "102560148OCI25CAA"
   },
-//   {
-//     name: "Oracle Certified Architect Associate",
-//     url: "/Oracle Cloud Infrastructure 2025 Certified Architect Associate.pdf",
-//     logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-//   },
 {
    bigname: "AIML Virtual Internship",
   issuedOn : "10/06/2025",
