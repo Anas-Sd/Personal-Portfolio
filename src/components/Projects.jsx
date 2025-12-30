@@ -38,14 +38,14 @@ export const Projects = () => {
             projectRef={projectRef}
             projectVisible={projectVisible}
             title="Prompt 2 Paint"
-            description="AI-powered MERN stack application for text-to-image generation."
+            description="Prompt 2 Paint an AI-powered MERN Stack application for text-to-image generation. Integrated cloud storage and responsive UI. Built secure backend using Node.js, Express.js, MongoDB Atlas."
             image={new URL("@/assets/prompt2paint-screenshot.png", import.meta.url).href}
             tags={["React.js", "Node.js", "MongoDB"]}
             Live="https://prompt2paint.vercel.app"
             github="https://github.com/Anas-Sd/Prompt_2_Paint"
             details={{
               overview:
-                "Prompt 2 Paint is an AI-powered text-to-image generation platform with secure authentication, credit-based usage, and cloud storage.",
+                "✨ Prompt 2 Paint is an AI-powered web application that transforms your text prompts into stunning,⚡ high-quality images using advanced diffusion models. Built with modern web technologies, it provides a smooth, fast, and creative image generation experience with many tools and features. Very well 🔒 Secured and Database supported 💾.",
               features: [
                 "Text-to-image AI generation",
                 "JWT authentication",
@@ -54,11 +54,11 @@ export const Projects = () => {
                 "Image download & storage",
               ],
               stack:
-                "React.js, Node.js, Express.js, MongoDB Atlas, Cloud Storage",
+                "React.js, Node.js, Express.js, MongoDB Atlas",
               role:
                 "Designed, developed, and deployed the complete application independently.",
               roadmap: [
-                "Advanced prompt customization",
+                "OTP system for more security",
                 "OAuth authentication",
                 "User profiles",
                 "Favorites & transaction history",
@@ -70,7 +70,7 @@ export const Projects = () => {
           <ProjectCard
             projectVisible={projectVisible}
             title="Flip 2 Win"
-            description="Interactive memory card game with animations and score tracking."
+            description="Flip 2 Win an Interactive memory card game built with JavaScript. Features smooth animations, score tracking, and responsive design for an engaging user experience."
             image={new URL("@/assets/flip the card logo.png", import.meta.url).href}
             tags={["JavaScript"]}
             Live="https://flip2win.vercel.app/"
