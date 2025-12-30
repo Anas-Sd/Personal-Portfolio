@@ -29,16 +29,23 @@ export const About = () => {
               card1Visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Who I Am</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+              Who I Am
+            </h3>
+
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-              Aspiring Software Engineer skilled in full-stack development with cloud-native
-              deployment. Strong analytical and problem-solving abilities, eager to leverage scalable,
-              high-performance solutions and contribute to impactful enterprise and cloud projects.
+              I am an aspiring Software Engineer with a strong focus on full-stack
+              development and cloud-native application design. I enjoy building
+              scalable, user-centric products and translating complex ideas into
+              clean, efficient, and maintainable code.
             </p>
+
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              With a strong foundation in Computer Science and a passion for continuous learning, I'm
-              currently pursuing my B.Tech at KL University while building real-world projects and
-              earning industry certifications.
+              Currently pursuing my B.Tech in Computer Science at KL University,
+              I actively work on real-world projects using modern technologies
+              like MERN stack, authentication systems, APIs, and cloud deployment.
+              I strongly believe in continuous learning and consistently upskill
+              myself through hands-on projects, certifications, and problem-solving.
             </p>
           </Card>
 
@@ -54,9 +61,11 @@ export const About = () => {
                   <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1 text-sm sm:text-base">Location</h4>
+                  <h4 className="font-semibold mb-1 text-sm sm:text-base">
+                    Location
+                  </h4>
                   <p className="text-xs sm:text-sm text-muted-foreground">
-                    Vijayawada, Andhra Pradesh
+                    Vijayawada, Andhra Pradesh, India
                   </p>
                 </div>
               </div>
@@ -68,7 +77,9 @@ export const About = () => {
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                 </div>
                 <div className="overflow-hidden">
-                  <h4 className="font-semibold mb-1 text-sm sm:text-base">Email</h4>
+                  <h4 className="font-semibold mb-1 text-sm sm:text-base">
+                    Email
+                  </h4>
                   <a
                     href="mailto:myportfolio44455@gmail.com"
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
@@ -85,12 +96,14 @@ export const About = () => {
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1 text-sm sm:text-base">Phone</h4>
+                  <h4 className="font-semibold mb-1 text-sm sm:text-base">
+                    Phone
+                  </h4>
                   <a
                     href="tel:+917674088150"
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +91 7674088150
+                    +91 76740 88150
                   </a>
                 </div>
               </div>
@@ -105,27 +118,54 @@ export const About = () => {
               education1Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Education</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+              Education
+            </h3>
+
             <div className="space-y-4 sm:space-y-6">
               <div>
-                <h4 className="font-semibold text-base sm:text-lg">KL University</h4>
+                <h4 className="font-semibold text-base sm:text-lg">
+                  KL University
+                </h4>
                 <p className="text-sm sm:text-base text-primary">
                   B.Tech in Computer Science and Engineering
                 </p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">2023 – 2027</p>
-                <p className="text-xs sm:text-sm font-medium mt-2">CGPA: 9.24</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                  2023 – 2027
+                </p>
+                <p className="text-xs sm:text-sm font-medium mt-2">
+                  CGPA: 9.24
+                </p>
               </div>
+
               <div className="border-t pt-4 sm:pt-6">
-                <h4 className="font-semibold text-base sm:text-lg">Narayana Junior College</h4>
-                <p className="text-sm sm:text-base text-primary">Intermediate (BIEAP)</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">2021 – 2023</p>
-                <p className="text-xs sm:text-sm font-medium mt-2">Percentage: 90%</p>
+                <h4 className="font-semibold text-base sm:text-lg">
+                  Narayana Junior College
+                </h4>
+                <p className="text-sm sm:text-base text-primary">
+                  Intermediate (BIEAP)
+                </p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                  2021 – 2023
+                </p>
+                <p className="text-xs sm:text-sm font-medium mt-2">
+                  Percentage: 90%
+                </p>
               </div>
+
               <div className="border-t pt-4 sm:pt-6">
-                <h4 className="font-semibold text-base sm:text-lg">Sri Chaitanya Techno School</h4>
-                <p className="text-sm sm:text-base text-primary">SSC</p>
-                <p className="text-xs sm:text-sm text-muted-foreground mt-1">2020 – 2021</p>
-                <p className="text-xs sm:text-sm font-medium mt-2">Percentage: 100%</p>
+                <h4 className="font-semibold text-base sm:text-lg">
+                  Sri Chaitanya Techno School
+                </h4>
+                <p className="text-sm sm:text-base text-primary">
+                  SSC
+                </p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                  2020 – 2021
+                </p>
+                <p className="text-xs sm:text-sm font-medium mt-2">
+                  Percentage: 100%
+                </p>
               </div>
             </div>
           </Card>
@@ -136,26 +176,35 @@ export const About = () => {
               education2Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Achievements</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+              Achievements
+            </h3>
+
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Recognized by CIIE Director for innovation in the "Fuel Accessibility Project"
-                  under DTI initiative
+                  Recognized by CIIE Director for innovation in the
+                  <strong> Fuel Accessibility Project </strong>
+                  under the DTI initiative
                 </p>
               </li>
+
               <li className="flex gap-3">
                 <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Completed learning Japanese language up to N3 level (self-learning and multilingual
-                  skills)
+                  Completed self-learning of the Japanese language up to
+                  <strong> N3 level</strong>, demonstrating strong multilingual
+                  and learning capabilities
                 </p>
               </li>
+
               <li className="flex gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Participated in 3 university Hackathons which involved building websites in teams
+                  Actively participated in
+                  <strong> 3 university-level hackathons</strong>, collaborating
+                  in teams to design and develop web applications
                 </p>
               </li>
             </ul>
