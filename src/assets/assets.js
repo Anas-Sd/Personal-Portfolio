@@ -13,6 +13,14 @@ export const certifications = [
     issuedOn : "08/08/2025",
     credentialID : "ozxr-uSez"
   },
+  {
+    bigname: "Associate Developer",
+    name: "MongoDB",
+    url: "https://www.credly.com/badges/b2944f0c-4aa5-4c54-bd31-21640f853f7b/public_url",
+    logo: "https://www.mongodb.com/assets/images/global/favicon.ico",
+    issuedOn : "10/01/2026",
+    credentialID : "MDBh4bh18ijmb"
+  },
   // {
   //   bigname: "Foundations Associate",
   //   name: "Oracle",
