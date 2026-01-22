@@ -123,7 +123,7 @@ export const Skills = () => {
                       <img
                         src={cert.logo}
                         alt={cert.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain "
                       />
                     </div>
                     <div className="pl-4 pt-1">

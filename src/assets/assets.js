@@ -14,6 +14,14 @@ export const certifications = [
     credentialID : "ozxr-uSez"
   },
   {
+    bigname: "Smart Coder",
+    name: "Smart Interviews",
+    url: "https://smartinterviews.in/certificate/1790888a",
+    logo: "/smartInterviews.png",
+    issuedOn : "02/01/2026",
+    credentialID : " -- "
+  },
+  {
     bigname: "Associate Developer",
     name: "MongoDB",
     url: "https://www.credly.com/badges/b2944f0c-4aa5-4c54-bd31-21640f853f7b/public_url",
