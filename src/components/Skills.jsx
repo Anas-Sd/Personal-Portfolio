@@ -8,6 +8,42 @@ export const Skills = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation();
   const { ref: certsRef, isVisible: certsVisible } = useScrollAnimation();
+  const { ref: hacksRef, isVisible: hacksVisible } = useScrollAnimation();
+  const { ref: internsRef, isVisible: internsvisible } = useScrollAnimation();
+
+
+
+
+  const interns = [
+    {
+      bigname: "AIML Virtual Internship",
+      issuedOn: "10/06/2025",
+      credentialID: "0de15c82e9068f86545983cc92b18511",
+      name: "By AWS - via EduSkills",
+      url: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=0de15c82e9068f86545983cc92b18511",
+      logo: "/AICTE_LOGO.png",
+    }
+
+  ];
+
+  const hackathons = [
+    {
+      bigname: "IIT - MADRAS",
+      name: "participant",
+      url: "/Visa-Hackathon-Certificate",
+      logo: "IIT-MADRAS-LOGO.png",
+      issuedOn: "04/01/2026",
+    },
+
+    {
+      bigname: "VR SIDDHARTHA",
+      name: "participant",
+      url: "VR-Siddhartha-Hackathon-Certificate",
+      logo: "/VR_SIDDHARTHA_LOGO.png",
+      issuedOn: "24/012026",
+    }
+
+  ];
 
   const skillCategories = [
     {
@@ -138,6 +174,105 @@ export const Skills = () => {
                     <div className="mb-2 text-[0.6rem] sm:text-xs">Credential Id : {cert.credentialID}</div>
                     <a
                       href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline text-xs sm:text-sm font-medium"
+                    >
+                      View Certificate →
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div
+          id="certifications"
+          ref={hacksRef}
+          className={`mt-12 sm:mt-16 transition-all duration-700 ${hacksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+        >
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">
+            Hackathons
+          </h3>
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth">
+            {hackathons.map((hacks) => (
+              <Card
+                key={hacks.name}
+                className="px-2 pl-5 py-6 sm:p-6 hover:shadow-glow transition-all animate-fade-in w-[300px] sm:w-[400px] snap-start flex-shrink-0"
+              >
+                <div className=" space-y-3 sm:space-y-4">
+                  <div className="flex ">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-muted rounded-xl p-2 sm:p-3">
+                      <img
+                        src={hacks.logo}
+                        alt={hacks.name}
+                        className="w-full h-full object-contain "
+                      />
+                    </div>
+                    <div className="pl-4 pt-1">
+                      <h1 className="text-lg sm:text-2xl">{hacks.bigname}</h1>
+                      <h4 className="text-zinc-500 pt-1 sm:pt-2 font-semibold text-xs sm:text-sm leading-tight break-words">
+                        {hacks.name}
+                      </h4>
+                    </div>
+                  </div>
+                  <div className=" flex flex-col text-xs gap-1 text-zinc-500">
+                    <div className="">Issued on : {hacks.issuedOn}</div>
+                    <div className="mb-2 text-[0.6rem] sm:text-xs">Credential Id : {hacks.credentialID}</div>
+                    <a
+                      href={hacks.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline text-xs sm:text-sm font-medium"
+                    >
+                      View Certificate →
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+
+        <div
+          id="certifications"
+          ref={internsRef}
+          className={`mt-12 sm:mt-16 transition-all duration-700 ${internsvisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+        >
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">
+            Internships
+          </h3>
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth">
+            {interns.map((interns) => (
+              <Card
+                key={interns.name}
+                className="px-2 pl-5 py-6 sm:p-6 hover:shadow-glow transition-all animate-fade-in w-[300px] sm:w-[400px] snap-start flex-shrink-0"
+              >
+                <div className=" space-y-3 sm:space-y-4">
+                  <div className="flex ">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-muted rounded-xl p-2 sm:p-3">
+                      <img
+                        src={interns.logo}
+                        alt={interns.name}
+                        className="w-full h-full object-contain "
+                      />
+                    </div>
+                    <div className="pl-4 pt-1">
+                      <h1 className="text-lg sm:text-2xl">{interns.bigname}</h1>
+                      <h4 className="text-zinc-500 pt-1 sm:pt-2 font-semibold text-xs sm:text-sm leading-tight break-words">
+                        {interns.name}
+                      </h4>
+                    </div>
+                  </div>
+                  <div className=" flex flex-col text-xs gap-1 text-zinc-500">
+                    <div className="">Issued on : {interns.issuedOn}</div>
+                    {/* <div className="mb-2 text-[0.6rem] sm:text-xs">Credential Id : {hacks.credentialID}</div> */}
+                    <a
+                      href={interns.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline text-xs sm:text-sm font-medium"

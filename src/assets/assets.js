@@ -46,14 +46,6 @@ export const certifications = [
     credentialID : "102560148OCI25CAA"
   },
 {
-   bigname: "AIML Virtual Internship",
-  issuedOn : "10/06/2025",
-  credentialID : "0de15c82e9068f86545983cc92b18511",
-  name: "By AWS - via EduSkills",
-  url: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=0de15c82e9068f86545983cc92b18511",
-  logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-},
-{
   bigname: "Multi Cloud Network Associate",
   name: "Aviatrix",
   issuedOn : "30/10/2025",
@@ -82,4 +74,18 @@ export const certifications = [
 //     url: "/RPA Certified Essentials Automation Professional Certificate.pdf",
 //     logo: Automation_Anywhere_RPA,
 //   },
+];
+
+
+
+export const hackathons = [
+  {
+    bigname: "Azure AZ-900",
+    name: "Microsoft",
+    url: "https://www.credly.com/badges/589abeb6-378f-488f-91bd-5ff17b0f696f/public_url",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    issuedOn : "08/08/2025",
+    credentialID : "ozxr-uSez"
+  }
+  
 ];
