@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
@@ -14,9 +15,8 @@ export const About = () => {
       <div className="max-w-7xl mx-auto">
         <div
           ref={titleRef}
-          className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${
-            titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
@@ -25,9 +25,8 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <Card
             ref={card1Ref}
-            className={`p-6 sm:p-8 transition-all duration-700 delay-100 ${
-              card1Visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
+            className={`p-6 sm:p-8 transition-all duration-700 delay-100 ${card1Visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
               Who I Am
@@ -51,9 +50,8 @@ export const About = () => {
 
           <div
             ref={card2Ref}
-            className={`space-y-4 sm:space-y-6 transition-all duration-700 delay-200 ${
-              card2Visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-            }`}
+            className={`space-y-4 sm:space-y-6 transition-all duration-700 delay-200 ${card2Visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+              }`}
           >
             <Card className="p-4 sm:p-6">
               <div className="flex items-start gap-3 sm:gap-4">
@@ -114,9 +112,8 @@ export const About = () => {
         <div className="mt-12 sm:mt-16 grid md:grid-cols-2 gap-6 sm:gap-8">
           <Card
             ref={education1Ref}
-            className={`p-6 sm:p-8 transition-all duration-700 delay-300 ${
-              education1Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`p-6 sm:p-8 transition-all duration-700 delay-300 ${education1Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
               Education
@@ -172,9 +169,8 @@ export const About = () => {
 
           <Card
             ref={education2Ref}
-            className={`p-6 sm:p-8 transition-all duration-700 delay-400 ${
-              education2Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`p-6 sm:p-8 transition-all duration-700 delay-400 ${education2Visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
               Achievements
@@ -184,8 +180,9 @@ export const About = () => {
               <li className="flex gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Recognized by CIIE Director for innovation in the
-                  <strong> Fuel Accessibility Project </strong>
+                  Recognized by CIIE Director for the Idea and Innovation in the
+                  <Link to={'/DTI-Certificate' } target="_blank"
+                    rel="noopener noreferrer"><strong className="underline"> Fuel Accessibility </strong></Link> Project 
                   under the DTI initiative
                 </p>
               </li>
@@ -200,11 +197,25 @@ export const About = () => {
               </li>
 
               <li className="flex gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <div className="w-2 h-2  rounded-full bg-primary mt-2 flex-shrink-0" />
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Actively participated in
-                  <strong> 3 university-level hackathons</strong>, collaborating
-                  in teams to design and develop web applications
+                  Actively participated as Team Lead  in
+                  <strong> 2 National-level Hackathons</strong>,
+                  Conducted by - 
+                  <Link
+                    to="/Visa-Hackathon-Certificate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong><span className="underline cursor-pointer hover:text-blue-500"> IIT - Madras </span></strong>
+                    and </Link>
+                  <Link
+                    to="/VR-Siddhartha-Hackathon-Certificate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong><span className="hover:text-blue-500 underline cursor-pointer">VR Siddhartha</span></strong></Link>,
+                  collaborating in teams to design and develop web applications
                 </p>
               </li>
             </ul>
