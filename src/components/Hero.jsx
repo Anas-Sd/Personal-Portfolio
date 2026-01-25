@@ -72,8 +72,8 @@ export const Hero = () => {
                 <div className="flex-shrink-0  inline-flex rounded-lg overflow-hidden shadow-glow transform transition-all duration-[2000ms] animate-float">
                   {/* Download Resume */}
                   <a
-                    href="/SYED_ANAS_RESUME__3_1.pdf"
-                    download="SYED_ANAS_RESUME__3_1.pdf"
+                    href="/SYED_ANAS_RESUME_3.2.0.pdf"
+                    download="SYED_ANAS_RESUME_3.2.0.pdf"
                     className="flex items-center justify-center px-2 py-1 bg-foreground text-background hover:bg-blue-600 hover:text-white transition-colors rounded-l-lg"
                   >
                     <Download className="w-4 h-4" />

@@ -12,6 +12,9 @@ import Oracle_FA_Certificate from "@/Pdf's/Oracle_FA_Certificate";
 import Salesforce_Certificate from "@/Pdf's/Salesforce_Certificate";
 import Internship_Certificate from "@/Pdf's/Internship_Certificate";
 import Lingua_Skills_Certificate from "./Pdf's/Lingua_Skills_Certificate";
+import Visa_Hackathon from "./Pdf's/Visa_Hackathon";
+import VR_Sidhartha_Hackathon from "./Pdf's/VR_Sidhartha_Hackathon";
+import DTI_CERTIFICATE from "./Pdf's/DTI_CERTIFICATE";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/Oracle-Foundations-Associate" element={<Oracle_FA_Certificate />} />
           {/* <Route path="/Oracle-Architect-Associate" element={<Oracle_AA_Certificate />} /> */}
           <Route path="/Salesforce-Agentforce-Specialist" element={<Salesforce_Certificate />} />
+          <Route path="/Visa-Hackathon-Certificate" element={<Visa_Hackathon />} />
+          <Route path="/VR-Siddhartha-Hackathon-Certificate" element={<VR_Sidhartha_Hackathon />} />
+          <Route path="/DTI-Certificate" element={<DTI_CERTIFICATE />} />
           <Route path="/AIML-Virtual-Internship" element={<Internship_Certificate />} />
           <Route path="/Lingua-Skills" element={<Lingua_Skills_Certificate />} />
         </Routes>
